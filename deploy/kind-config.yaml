@@ -1,0 +1,10 @@
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+name: jsa
+nodes:
+  - role: control-plane
+    extraPortMappings:
+      # Lets the host reach the api Service via NodePort 30080 at localhost:8080
+      - containerPort: 30080
+        hostPort: 8080
+        protocol: TCP
