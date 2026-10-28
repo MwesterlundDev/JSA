@@ -3,3 +3,6 @@
 *.local
 bin/
 node_modules/
+
+# Personal learning notes
+docs/learning/

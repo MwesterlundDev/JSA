@@ -39,7 +39,7 @@ func main() {
 	})
 
 	mux.HandleFunc("GET /api/hello", func(w http.ResponseWriter, r *http.Request) {
-		writeJSON(w, http.StatusOK, map[string]string{"message": "hello from job-search-automator"})
+		writeJSON(w, http.StatusOK, map[string]string{"message": "Hello from job-search-automator", "timestamp": time.Now().Format("15:04:05.000")})
 	})
 
 	srv := &http.Server{

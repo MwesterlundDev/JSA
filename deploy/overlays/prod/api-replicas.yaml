@@ -1,0 +1,14 @@
+# TEST FOR THE KUSTOMIZE LEARNING
+  apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: api
+  spec:
+    replicas: 3
+    template:
+      spec:
+        containers:
+          - name: api          # required: this is the merge key
+            resources:
+              limits:
+                memory: 52Mi  # raise as needed

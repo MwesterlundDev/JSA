@@ -399,7 +399,7 @@ The roadmap alternates learning and building across five phases, and each phase 
 
 ```mermaid
 flowchart LR
-  p1["1. Foundations<br/>Learn: Docker, K8s core, Kustomize, Tilt, Go idioms<br/>Build: hello service on local cluster under Tilt"] --> g1{{"Gate: edit reaches cluster;<br/>diagnose CrashLoopBackOff"}}
+  p1["1. Foundations<br/>Learn: Docker, K8s core, Kustomize, Tilt, Go idioms<br/>Build: hello service on local cluster under Tilt"] --> g1{{"✓ Gate passed Oct 27: edit reaches cluster;<br/>diagnose CrashLoopBackOff"}}
   g1 --> p2["2. Backbone<br/>Learn: River, SvelteKit spike, API contract<br/>Build: schema, API, worker, web shell, tenant layer"] --> g2{{"Gate: submit a company,<br/>watch a job complete in the UI"}}
   g2 --> p3["3. Research<br/>Learn: fetching, headless browser, extraction evals<br/>Build: fetch + extract + versioned profiles + provenance"] --> g3{{"Gate: profile for a real company<br/>with sources, measured quality"}}
   g3 --> p4["4. Matching<br/>Learn: pgvector, HNSW trade-offs<br/>Build: three embeddings, relations, posting analysis, similar roles"] --> g4{{"Gate: apply to one posting,<br/>get sensible similar roles"}}
@@ -444,6 +444,6 @@ These are rough guesses to be revised after the first phase shows your real pace
 
 **Next steps**
 
-1. Finish the Phase 1 scaffold: run `make up` and `tilt up`, and confirm `/readyz` returns 200 once Postgres is ready.
-2. Do the Phase 1 learning exercises (kill the Postgres pod and watch the volume persist, break a probe on purpose, add a migrations Job).
-3. Pass the Phase 1 gate, then start the Backbone phase.
+1. Done: Phase 1 scaffold running under `make up` and `tilt up`; Kubernetes core, Kustomize, and Tilt passed their done checks; the Phase 1 gate passed on Oct 27.
+2. Not yet in the learning logs: the migrations Job exercise, which fits once the first schema exists.
+3. Start the Backbone phase with Go: build the concurrent fetcher as a separate small module, then Postgres, River, and the API contract.

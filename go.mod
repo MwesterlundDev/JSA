@@ -1,3 +1,3 @@
-module github.com/mwesterlund/job-search-automator
+module github.com/MwesterlundDev/JSA
 
 go 1.23
